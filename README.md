@@ -28,12 +28,59 @@
 
 ---
 
-## 🎯 Problem Statement
+## 🎯 Problem Statement: CodeLens — Intelligent Repository Search
 
-### **Track Selection in Progress**
-*Domain:* **General Track**
+Large codebases are difficult for developers to explore quickly. Keyword search tools (like naive grep or text search) often match irrelevant comments, build artifacts, or strings while missing syntactic context.
 
-Details regarding the chosen problem statement track and technical requirements.
+**CodeLens** is a lightweight, AST-powered repository inspection tool that:
+1. **Safely extracts** GitHub repository ZIP files (with Zip Slip prevention).
+2. **Filters noise** by ignoring `node_modules`, `.git`, `build`, `dist`, `__pycache__`, and virtual environments.
+3. **Parses Python syntax trees (AST)** to extract exact functions, methods, classes, signatures, docstrings, and line numbers.
+4. **Ranks relevant definitions** using a transparent multi-signal scoring algorithm.
+5. **Displays actual code and line ranges** (`L{start}–L{end}`) with syntax highlighting.
+6. **Explains search relevance** using a dual-mode engine: works 100% out of the box with zero external dependencies via AST heuristics, with optional LLM API support (Gemini/OpenAI) if an API key is configured.
+7. **Exports the indexed codebase** to portable JSON.
+
+---
+
+## ⚡ Quick Start & How to Run
+
+### 1. Install Dependencies
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+### 2. Launch CodeLens Dashboard
+```bash
+streamlit run app.py
+```
+Open your browser at `http://localhost:8501`.
+
+### 3. Run Automated Tests
+```bash
+python3 -m unittest discover tests/
+python3 tests/verify_e2e.py
+```
+
+---
+
+## 🏗️ Architecture & Project Structure
+
+```
+CBITHACKATHON-28/
+├── app.py                     # Streamlit web interface & developer dashboard
+├── requirements.txt           # Minimal dependencies (streamlit, requests)
+├── sample_repo.zip            # Built-in demo repository for 1-click evaluation
+├── core/
+│   ├── scanner.py             # Safe ZIP extraction & Python AST code parser
+│   ├── search.py              # Keyword search & relevance ranking engine
+│   └── explainer.py           # Dual-mode relevance explainer (Heuristic + Optional LLM)
+├── tests/
+│   ├── test_codelens.py       # Unit tests for AST, safety, search & explanations
+│   ├── verify_e2e.py          # End-to-end pipeline verification script
+│   └── create_sample_zip.py   # Script to package sample_repo.zip
+└── README.md                  # Project documentation
+```
 
 ---
 
