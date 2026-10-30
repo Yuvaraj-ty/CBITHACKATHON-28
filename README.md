@@ -1,37 +1,38 @@
 # 🚀 CBIT Hacktoberfest '26 — Project Starter Repository
 
 > **Official Public Starter Repository for CBIT Hacktoberfest '26**  
-> *Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad*
+> _Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad_
 
 ---
 
 ## 📋 Team Information
 
-| Attribute | Details |
-| :--- | :--- |
-| **Team Name** | **Fork Knights** |
-| **Team Number** | `TEAM-28` (`HFT26-TEAM-28`) |
-| **Registration ID** | `HFEST26-BYPPL4R8` |
-| **Problem Track** | **Track Selection in Progress** |
-| **Domain** | `General Track` |
-| **Team Leader** | Yuvaraj Tirumalasetty (yuvaraj.trsy@gmail.com) |
-| **Institution** | VNR Hyderabad |
+| Attribute           | Details                                        |
+| :------------------ | :--------------------------------------------- |
+| **Team Name**       | **Fork Knights**                               |
+| **Team Number**     | `TEAM-28` (`HFT26-TEAM-28`)                    |
+| **Registration ID** | `HFEST26-BYPPL4R8`                             |
+| **Problem Track**   | **Track Selection in Progress**                |
+| **Domain**          | `General Track`                                |
+| **Team Leader**     | Yuvaraj Tirumalasetty (yuvaraj.trsy@gmail.com) |
+| **Institution**     | VNR Hyderabad                                  |
 
 ### 👥 Team Members
 
-| # | Name | Email | Institution |
-| :--- | :--- | :--- | :--- |
-| 1 | Gogula Ajitesh | gamingajitesh9@gmail.com | VNR Hyderabad |
-| 2 | A. Srikar | srikarreddy4538@gmail.com | VNR Hyderabad |
-| 3 | Tejasvi Acharya | bhattertejasvi27@gmail.com | VNR Hyderabad |
-| 4 | Utkarsh S | usingh51219@gmail.com | VNR Hyderabad |
+| #   | Name            | Email                      | Institution   |
+| :-- | :-------------- | :------------------------- | :------------ |
+| 1   | Gogula Ajitesh  | gamingajitesh9@gmail.com   | VNR Hyderabad |
+| 2   | A. Srikar       | srikarreddy4538@gmail.com  | VNR Hyderabad |
+| 3   | Tejasvi Acharya | bhattertejasvi27@gmail.com | VNR Hyderabad |
+| 4   | Utkarsh S       | usingh51219@gmail.com      | VNR Hyderabad |
 
 ---
 
 ## 🎯 Problem Statement
 
-### **Track Selection in Progress**
-*Domain:* **General Track**
+### **Helping New Contributors Find the Right Code**
+
+_Domain:_ **Open-Source Developer Tools, Code Intelligence, Software Engineering**
 
 Details regarding the chosen problem statement track and technical requirements.
 
@@ -84,6 +85,7 @@ All teams must follow the official fork-and-pull-request workflow:
 ---
 
 ## ⚠️ Important Rules & Code of Conduct
-* **Upstream Protection**: Do not push directly to this repository's main branch. All evaluation will be conducted on your submitted Pull Request.
-* **Original Work**: All code submitted must be developed during the hackathon timeline. Open-source libraries and frameworks are welcomed with proper attribution.
-* **Code Freeze**: Final Pull Requests must be submitted before the designated hackathon submission deadline.
+
+- **Upstream Protection**: Do not push directly to this repository's main branch. All evaluation will be conducted on your submitted Pull Request.
+- **Original Work**: All code submitted must be developed during the hackathon timeline. Open-source libraries and frameworks are welcomed with proper attribution.
+- **Code Freeze**: Final Pull Requests must be submitted before the designated hackathon submission deadline.
