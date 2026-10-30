@@ -87,8 +87,20 @@ with st.sidebar:
     st.caption("AST-Powered Python Repository Search")
     st.markdown("---")
 
+    # Indexing Settings
+    st.subheader("⚙️ Indexing Settings")
+    max_file_kb = st.slider(
+        "Max File Size (KB)",
+        min_value=10,
+        max_value=1000,
+        value=200,
+        step=10,
+        help="Files larger than this limit are skipped during repository scanning."
+    )
+
+    st.markdown("---")
     # API Configuration (Optional)
-    st.subheader("⚙️ AI Configuration")
+    st.subheader("🤖 AI Configuration")
     st.info("💡 **API key is optional!** CodeLens works 100% out of the box with built-in AST heuristics.", icon="ℹ️")
 
     api_provider = st.selectbox("AI Provider", ["Gemini", "OpenAI"], index=0)
@@ -107,7 +119,7 @@ with st.sidebar:
             with st.spinner("Extracting and parsing sample repository AST..."):
                 with tempfile.TemporaryDirectory() as tmp_dir:
                     extract_zip_safely("sample_repo.zip", tmp_dir)
-                    st.session_state.index_data = scan_repository(tmp_dir)
+                    st.session_state.index_data = scan_repository(tmp_dir, max_file_kb=max_file_kb)
                     st.session_state.repo_name = "sample_repo.zip"
                     st.success("Sample repository indexed!")
 
@@ -123,7 +135,7 @@ with st.sidebar:
             with st.spinner(f"Extracting and indexing `{uploaded_file.name}`..."):
                 with tempfile.TemporaryDirectory() as tmp_dir:
                     extract_zip_safely(uploaded_file, tmp_dir)
-                    st.session_state.index_data = scan_repository(tmp_dir)
+                    st.session_state.index_data = scan_repository(tmp_dir, max_file_kb=max_file_kb)
                     st.session_state.repo_name = uploaded_file.name
                     st.success(f"Successfully indexed {uploaded_file.name}!")
 
@@ -160,11 +172,30 @@ else:
     # Repository Stats Overview
     # ---------------------------------------------------------
     summary = st.session_state.index_data["summary"]
+    skip_report = summary.get("skip_report", {
+        "indexed": summary.get("total_files", 0),
+        "skipped_total": 0,
+        "reasons": {"excluded_dir": 0, "excluded_pattern": 0, "too_large": 0, "binary": 0}
+    })
+    reasons = skip_report.get("reasons", {})
+
+    st.subheader("📊 Indexing Overview")
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Repository", st.session_state.repo_name)
-    c2.metric("Python Files Scanned", summary["total_files"])
-    c3.metric("Functions & Methods", summary["total_functions"])
-    c4.metric("Classes Indexed", summary["total_classes"])
+    c2.metric("Files Indexed", skip_report.get("indexed", summary.get("total_files", 0)))
+    c3.metric("Files Skipped", skip_report.get("skipped_total", 0))
+    c4.metric("Definitions Found", summary.get("total_items", 0))
+
+    with st.expander("ℹ️ Skip Reasons and Counts", expanded=(skip_report.get("skipped_total", 0) > 0)):
+        r1, r2, r3, r4 = st.columns(4)
+        r1.metric("Excluded Dirs", reasons.get("excluded_dir", 0))
+        r2.metric("Excluded Patterns", reasons.get("excluded_pattern", 0))
+        r3.metric("Too Large", reasons.get("too_large", 0))
+        r4.metric("Binary Files", reasons.get("binary", 0))
+
+        st.caption("Detailed reasons breakdown:")
+        for reason_name, count in reasons.items():
+            st.write(f"- **{reason_name.replace('_', ' ').title()}**: `{count}`")
 
     with st.expander("📂 View Scanned Python Files"):
         st.write(summary.get("scanned_files", []))
