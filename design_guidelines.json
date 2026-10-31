@@ -1,0 +1,267 @@
+{
+  "theme": "dark-first",
+  "archetype": "THE PERFORMANCE PRO (Developer Tool / Code Editor Precision)",
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#0B0F17",
+        "on_bg": "#F1F5F9",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "border": "#1E293B",
+          "link": "#60A5FA",
+          "accent_glow": "rgba(59, 130, 246, 0.15)"
+        }
+      },
+      {
+        "name": "sidebar",
+        "kind": "solid",
+        "bg": "#080C14",
+        "on_bg": "#E2E8F0",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "border": "#1E293B",
+          "active_item_bg": "#1E293B",
+          "active_item_text": "#38BDF8"
+        }
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#0F172A",
+        "on_bg": "#F8FAFC",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "border": "#334155",
+          "hover_bg": "#1E293B"
+        }
+      },
+      {
+        "name": "editor_surface",
+        "kind": "solid",
+        "bg": "#070B12",
+        "on_bg": "#E2E8F0",
+        "on_bg_muted": "#64748B",
+        "roles": {
+          "line_numbers": "#475569",
+          "highlight_line": "#1E293B80",
+          "active_step_highlight": "#38BDF820",
+          "git_added_bg": "#064E3B40",
+          "git_added_text": "#34D399",
+          "git_removed_bg": "#7F1D1D40",
+          "git_removed_text": "#F87171"
+        }
+      },
+      {
+        "name": "card",
+        "kind": "solid",
+        "bg": "#111827",
+        "on_bg": "#F9FAFB",
+        "on_bg_muted": "#9CA3AF",
+        "roles": {
+          "border": "#1F2937",
+          "hover_border": "#3B82F6"
+        }
+      },
+      {
+        "name": "evidence_panel",
+        "kind": "solid",
+        "bg": "#0D131F",
+        "on_bg": "#F8FAFC",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "confidence_high": "#10B981",
+          "confidence_medium": "#F59E0B",
+          "confidence_low": "#EF4444",
+          "border": "#1E293B"
+        }
+      },
+      {
+        "name": "banner_impact_simulation",
+        "kind": "solid",
+        "bg": "#7C2D12",
+        "on_bg": "#FEF3C7",
+        "on_bg_muted": "#FDE68A",
+        "roles": {
+          "border": "#F97316",
+          "button_bg": "#C2410C",
+          "button_text": "#FFFFFF"
+        }
+      },
+      {
+        "name": "chat_user_bubble",
+        "kind": "solid",
+        "bg": "#1D4ED8",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#BFDBFE"
+      },
+      {
+        "name": "chat_assistant_bubble",
+        "kind": "solid",
+        "bg": "#131C2E",
+        "on_bg": "#F1F5F9",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "border": "#1E293B"
+        }
+      },
+      {
+        "name": "badge_mode_expert",
+        "kind": "solid",
+        "bg": "#581C87",
+        "on_bg": "#E9D5FF",
+        "on_bg_muted": "#D8B4FE"
+      },
+      {
+        "name": "badge_mode_student",
+        "kind": "solid",
+        "bg": "#1E3A8A",
+        "on_bg": "#DBEAFE",
+        "on_bg_muted": "#BFDBFE"
+      },
+      {
+        "name": "badge_mode_beginner",
+        "kind": "solid",
+        "bg": "#064E3B",
+        "on_bg": "#D1FAE5",
+        "on_bg_muted": "#A7F3D0"
+      }
+    ],
+    "accent": "#2563EB",
+    "accent_hover": "#1D4ED8",
+    "on_accent": "#FFFFFF",
+    "secondary_accent": "#8B5CF6",
+    "on_secondary_accent": "#FFFFFF",
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "error": "#EF4444",
+    "code_tokens": {
+      "keyword": "#C084FC",
+      "function": "#60A5FA",
+      "string": "#34D399",
+      "comment": "#64748B",
+      "variable": "#F87171",
+      "number": "#FBBF24"
+    }
+  },
+  "typography": {
+    "font_family_sans": "Geist Variable, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "font_family_mono": "JetBrains Mono Variable, 'Fira Code', monospace",
+    "scale_px": {
+      "display": 48,
+      "h1": 36,
+      "h2": 28,
+      "h3": 20,
+      "h4": 16,
+      "body": 15,
+      "caption": 13,
+      "code": 13
+    },
+    "rules": {
+      "headings": "font-sans font-semibold tracking-tight text-slate-100",
+      "body": "font-sans font-normal text-slate-200 leading-relaxed",
+      "code": "font-mono font-normal tracking-normal leading-5",
+      "labels": "font-sans text-xs uppercase tracking-wider font-medium text-slate-400"
+    }
+  },
+  "entry_surfaces": {
+    "/": "Three-pane IDE workspace — collapsible repo file tree left, syntax code viewer & function walker center, context-aware AI chat with evidence sidebar right",
+    "/explorer": "Full-canvas React Flow interactive code graph with mode switcher (Call Graph / Execution Flow), function inspector drawer, dual-node diff comparator, and blast-radius impact simulation bar",
+    "/learn": "Mastery hub & Quiz studio — topic / repo quiz selector with difficulty pills, active single-question quiz terminal with syntax snippets and instant pedagogical feedback, score telemetry & historical breakdown",
+    "/login": "Branded split auth terminal — CodeAtlas neural code intelligence showcase left, dark glass credentials portal right"
+  },
+  "visual_enhancers": {
+    "editor_chrome": "1px solid #1E293B border, matte deep dark titlebar with macOS-inspired status dots, breadcrumb bar, active tab with glowing top border #3B82F6",
+    "graph_nodes": "Custom React Flow node with dark border, node-type badges (controller, service, util, db), call-count pill, execution order badge, high-contrast SVG connection lines with animated dashed strokes for active execution paths",
+    "scrim_and_overlays": "Modal backdrop backdrop-blur-md bg-black/60; drawer overlay with subtle right-to-left slide-in shadow",
+    "syntax_viewer": "Prism-react-renderer with VSCode-dark / Night-Owl inspired custom theme, interactive line highlighting, active walkthrough indicator badge with step jumping controls"
+  },
+  "layouts_and_grids": {
+    "app_shell": "flex h-screen w-screen overflow-hidden bg-[#0B0F17] text-slate-200",
+    "persistent_sidebar": "w-64 flex-shrink-0 flex flex-col justify-between bg-[#080C14] border-r border-slate-800/80 p-3 select-none",
+    "workspace_page": "flex-1 flex flex-row h-full overflow-hidden",
+    "file_tree_pane": "w-64 border-r border-slate-800/80 bg-[#0A0F18] flex flex-col transition-all duration-200",
+    "code_viewer_pane": "flex-1 flex flex-col bg-[#070B12] overflow-hidden min-w-[360px]",
+    "evidence_and_chat_pane": "w-96 border-l border-slate-800/80 bg-[#0D131F] flex flex-col",
+    "explorer_page": "flex-1 flex flex-col h-full bg-[#070B12] relative overflow-hidden",
+    "quiz_page": "flex-1 overflow-y-auto p-8 max-w-5xl mx-auto flex flex-col gap-6"
+  },
+  "component_hierarchy_and_paths": {
+    "shell": {
+      "Sidebar": "frontend/src/components/layout/Sidebar.tsx",
+      "RepoSelector": "frontend/src/components/layout/RepoSelector.tsx",
+      "Header": "frontend/src/components/layout/Header.tsx"
+    },
+    "workspace": {
+      "RepoUploadModal": "frontend/src/components/workspace/RepoUploadModal.tsx",
+      "GithubGuideModal": "frontend/src/components/workspace/GithubGuideModal.tsx",
+      "FileTree": "frontend/src/components/workspace/FileTree.tsx",
+      "CodeViewer": "frontend/src/components/workspace/CodeViewer.tsx",
+      "FunctionWalkthrough": "frontend/src/components/workspace/FunctionWalkthrough.tsx",
+      "AlternativeImplModal": "frontend/src/components/workspace/AlternativeImplModal.tsx",
+      "GitHistoryDiffModal": "frontend/src/components/workspace/GitHistoryDiffModal.tsx",
+      "AiChatPanel": "frontend/src/components/workspace/AiChatPanel.tsx",
+      "EvidencePanel": "frontend/src/components/workspace/EvidencePanel.tsx"
+    },
+    "explorer": {
+      "CodeGraphCanvas": "frontend/src/components/explorer/CodeGraphCanvas.tsx",
+      "CustomGraphNode": "frontend/src/components/explorer/CustomGraphNode.tsx",
+      "NodeDetailDrawer": "frontend/src/components/explorer/NodeDetailDrawer.tsx",
+      "FunctionCompareModal": "frontend/src/components/explorer/FunctionCompareModal.tsx",
+      "ImpactSimulationBanner": "frontend/src/components/explorer/ImpactSimulationBanner.tsx"
+    },
+    "learning": {
+      "QuizSelector": "frontend/src/components/learning/QuizSelector.tsx",
+      "QuizSession": "frontend/src/components/learning/QuizSession.tsx",
+      "QuizResults": "frontend/src/components/learning/QuizResults.tsx",
+      "QuizHistoryTable": "frontend/src/components/learning/QuizHistoryTable.tsx"
+    },
+    "auth": {
+      "LoginForm": "frontend/src/components/auth/LoginForm.tsx"
+    }
+  },
+  "key_features_specification": {
+    "workspace_page": {
+      "mode_selector": "Beginner (high-level visual explanations & analogy), Student (conceptual breakdowns with computer science foundations), Expert (low-level runtime complexity, edge cases, AST breakdown)",
+      "repo_upload": "Support ZIP file upload, local folder upload, or GitHub repository URL indexing. Step-by-step indexing progress bar: Fetching AST -> Parsing Symbols -> Generating Embedding Index -> Building Call Graphs -> Ready.",
+      "github_guide_modal": "Accessible from upload modal with full visual walkthrough on generating GitHub personal access tokens or finding public repo URLs.",
+      "code_viewer": "Line numbers, syntax highlighting via prism-react-renderer, breadcrumb trail (repo > folder > file.ts), file AI summary banner at top.",
+      "selected_code_follow_up": "Selecting lines of code exposes a floating contextual chip: 'Ask AI about selection' which prefills the AI prompt with line ranges.",
+      "function_walkthrough": "Interactive widget with Prev / Next step buttons that highlight corresponding line ranges in the code viewer, step title, and explanation.",
+      "alternative_implementations": "AI-generated alternative implementations clearly labelled with a high-visibility badge: 'AI GENERATED - NOT FROM REPO' with trade-off comparison (Performance vs Readability vs Memory).",
+      "git_history_diff": "Side-by-side or unified diff viewer showing commit changes for the active function across recent git revisions."
+    },
+    "code_explorer_page": {
+      "graph_modes": "Toggle between Call/Dependency Graph (hierarchical dependencies) and Execution Flowchart (step-by-step logic branching with condition diamonds & action nodes).",
+      "node_interactions": "Clicking a node opens the right-side Node Details Drawer showing exported signatures, callers, callees, complexity rating, and quick jump to code.",
+      "compare_functions": "Modal allowing user to pick any two functions in the repo and inspect side-by-side signature, cyclomatic complexity, parameter contracts, and call trees.",
+      "impact_simulation": "Simulate removing or deprecating a node. The graph highlights affected downstream nodes in warning red/orange, calculates blast radius score, and presents a persistent top banner: 'Impact Simulation Active: 4 dependent components broken' with [Undo] and [Reset Graph] buttons."
+    },
+    "learning_dashboard": {
+      "quiz_modes": "General CS topics (Algorithms, React Architecture, Python Async, Git Internals) and Repository-Specific quizzes generated from the active indexed repo.",
+      "quiz_config": "Difficulty selector (Easy, Medium, Hard), Question Count selector (3, 5, 10).",
+      "quiz_runner": "One question at a time with animated progress bar, syntax-highlighted code question snippets, multiple choice options with keyboard shortcuts (1-4 or A-D).",
+      "instant_feedback": "After submission, immediately presents correctness, deep pedagogical explanation, exact code line references, and 'Why other options are wrong'.",
+      "results_screen": "Score percentage, grade badge, radar breakdown of Strengths vs Weaknesses, question review list, and [Retake Quiz] / [Review Code in Workspace] actions.",
+      "history_view": "Table of completed quizzes with date, repo, topic, score, difficulty, and [Review] button."
+    }
+  },
+  "motion_and_interactions": {
+    "page_transitions": "Subtle fade-in and slide-up (opacity: 0 -> 1, y: 6 -> 0, duration: 0.18s ease-out)",
+    "tabs_and_toggles": "LayoutId sliding pill for active mode and graph mode selectors",
+    "drawer_and_modals": "Scale 0.98 -> 1.0 with backdrop opacity transition",
+    "code_step_highlight": "Smooth background color flash transition (#38BDF825 to #38BDF815) when stepping through walkthrough",
+    "data_testid_convention": "All action elements (buttons, inputs, tabs, quiz choices, code lines, graph nodes, upload triggers) MUST have explicit kebab-case data-testid tags (e.g., data-testid='upload-repo-btn', data-testid='mode-selector-expert', data-testid='quiz-option-2', data-testid='simulate-impact-btn')"
+  },
+  "instructions_to_main_agent": [
+    "Install required visualization & parsing libraries in frontend: `yarn add @xyflow/react prism-react-renderer canvas-confetti @types/canvas-confetti` (for React Flow and code syntax rendering).",
+    "Ensure the HTML root has `class='dark'` so all dark mode styles and tokens apply seamlessly.",
+    "Implement rich mock/seeded repositories (e.g. 'CodeAtlas Engine (TypeScript/FastAPI)', 'FastAPI Microservice', 'E-commerce React Store') so all features (file tree, code viewer, call graphs, quizzes) work immediately out of the box with realistic syntax-highlighted code.",
+    "Provide interactive mock indexing progress when users upload files or submit a GitHub URL.",
+    "Ensure React Flow nodes and edges are styled cleanly with dark theme nodes, crisp borders, and informative node headers.",
+    "Ensure every interactive element has a unique `data-testid` attribute for robust automated verification.",
+    "Include toast feedback via Sonner for actions like copying code snippets, resetting graph simulation, finishing quizzes, or saving settings."
+  ]
+}
