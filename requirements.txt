@@ -1,4 +1,0 @@
-streamlit>=1.30.0
-requests>=2.28.0
-tree-sitter
-tree-sitter-language-pack
